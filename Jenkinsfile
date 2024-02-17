@@ -22,7 +22,7 @@ pipeline {
     stage('Two') {
 
           steps {
-            echo env_variable - '${env_variable}'
+            sh 'echo env_variable - "${env_variable}"'
           }
         }
   }
