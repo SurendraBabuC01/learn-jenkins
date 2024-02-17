@@ -1,10 +1,10 @@
-pipeline {
-
-  agent {
-    node {
-      label 'workstation'
-    }
-  }
+// pipeline {
+//
+//   agent {
+//     node {
+//       label 'workstation'
+//     }
+//   }
 
 //   environment {
 //     env_variable = 'env_variable'
@@ -61,5 +61,15 @@ pipeline {
 //       echo 'Clean SetUP Pipeline'
 //     }
 //   }
-}
+// }
+
+
+pipeline {
+
+  agent {
+    node {
+      label 'workstation'
+    }
+
+  }
 
