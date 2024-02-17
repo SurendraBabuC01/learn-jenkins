@@ -6,14 +6,25 @@ pipeline {
     }
   }
 
+  environment {
+    env_variable = 'env_variable'
+  }
+
   stages {
 
-    stage('one') {
+    stage('One') {
 
       steps {
         sh 'echo surendra'
       }
     }
+
+    stage('Two') {
+
+          steps {
+            echo env_variable - '${env_variable}'
+          }
+        }
   }
 
   post {
