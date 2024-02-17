@@ -14,9 +14,9 @@
 //      string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Please provide the input?')
 //    }
 
-  options {
-     ansiColor('xterm')
-  }
+//   options {
+//      ansiColor('xterm')
+//   }
 
 //   triggers { pollSCM('H/2 * * * *') }
 
@@ -71,6 +71,10 @@ pipeline {
       label 'workstation'
     }
   }
+
+  options {
+       ansiColor('xterm')
+    }
 
   stages {
     stage('One') {
