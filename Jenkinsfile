@@ -10,6 +10,10 @@ pipeline {
     env_variable = 'env_variable'
   }
 
+  options {
+     ansiColor('xterm')
+  }
+
   stages {
 
     stage('One') {
