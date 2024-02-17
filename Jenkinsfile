@@ -23,12 +23,11 @@ pipeline {
   stages {
 
     stage('One') {
-
+      input {
+        message "Should we continue?"
+        ok "Yes"
+      }
       steps {
-        input {
-          message "Should we continue?"
-          ok "Yes"
-        }
         sh 'echo surendra'
       }
     }
