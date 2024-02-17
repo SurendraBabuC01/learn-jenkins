@@ -33,6 +33,13 @@ pipeline {
             sh 'echo env_variable - "${env_variable}"'
           }
         }
+
+    stage('Three') {
+
+              steps {
+                sh 'echo "Hello ${params.PERSON}"'
+              }
+            }
   }
 
   post {
