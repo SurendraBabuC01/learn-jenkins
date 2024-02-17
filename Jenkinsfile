@@ -13,10 +13,9 @@ pipeline {
   input {
     message "Should we continue?"
     ok "Yes"
-  }
-
-  parameters {
-    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Please provide the input?')
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Please provide the input?')
+      }
   }
 
   options {
