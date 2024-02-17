@@ -1,11 +1,11 @@
-// pipeline {
-//
-//   agent {
-//     node {
-//       label 'workstation'
-//     }
-//   }
-//
+pipeline {
+
+  agent {
+    node {
+      label 'workstation'
+    }
+  }
+
 //   environment {
 //     env_variable = 'env_variable'
 //   }
@@ -13,13 +13,13 @@
 //    parameters {
 //      string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Please provide the input?')
 //    }
-//
-//   options {
-//      ansiColor('xterm')
-//   }
-//
+
+  options {
+     ansiColor('xterm')
+  }
+
 //   triggers { pollSCM('H/2 * * * *') }
-//
+
 //   stages {
 //
 //     stage('parallel stage') {
@@ -61,5 +61,5 @@
 //       echo 'Clean SetUP Pipeline'
 //     }
 //   }
-// }
-//
+}
+
