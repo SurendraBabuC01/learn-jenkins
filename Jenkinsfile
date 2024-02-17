@@ -74,7 +74,9 @@ pipeline {
 
   stages {
     stage('One') {
-      echo 'Hello World'
+      steps {
+        echo 'Hello World'
+      }
     }
   }
 
