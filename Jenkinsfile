@@ -18,6 +18,8 @@ pipeline {
      ansiColor('xterm')
   }
 
+  triggers { pollSCM('H/1 * * * *') }
+
   stages {
 
     stage('One') {
