@@ -70,7 +70,12 @@ pipeline {
     node {
       label 'workstation'
     }
+  }
 
+  stages {
+    stage('One') {
+      echo 'Hello World'
+    }
   }
 
   }
