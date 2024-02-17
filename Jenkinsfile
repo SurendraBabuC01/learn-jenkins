@@ -22,33 +22,38 @@ pipeline {
 
   stages {
 
-    stage('One') {
-      input {
-        message "Should we continue?"
-        ok "Yes"
-      }
-      steps {
-        sh 'echo surendra'
-      }
-    }
-
-    stage('Two') {
-           when {
-             expression {
-               GIT_BRANCH == "origin/test"
-             }
-           }
-          steps {
-            sh 'echo env_variable - "${env_variable}"'
-          }
-        }
-
-    stage('Three') {
-
+    stage('parallel stage') {
+      parallel {
+        stage('One') {
+              input {
+                message "Should we continue?"
+                ok "Yes"
+              }
               steps {
-                echo "Hello ${params.PERSON}"
+                sh 'echo surendra'
               }
             }
+
+            stage('Two') {
+                   when {
+                     expression {
+                       GIT_BRANCH == "origin/test"
+                     }
+                   }
+                  steps {
+                    sh 'echo env_variable - "${env_variable}"'
+                  }
+                }
+
+            stage('Three') {
+
+                      steps {
+                        echo "Hello ${params.PERSON}"
+                      }
+                    }
+
+      }
+    }
   }
 
   post {
